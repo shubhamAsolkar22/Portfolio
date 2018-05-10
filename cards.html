@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".container").mouseenter(function(){
+      $(this).css('background-color','#f7eed9');
+    });
+
+    $(".container").mouseleave(function(){
+      $(this).css('background-color','#dae1ed');
+    });
+
+
+    $(".container").click(function(){
+        $("img").toggle(200);
+    });
+});
+</script>
+
+<style>
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    background-color: #dae1ed;
+    padding: 2px 16px;
+    box-shadow: 0 0px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+
+.card img{
+  display: none;
+}
+
+.imageHolder{
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+
+
+</style>
+</head>
+<body>
+
+<h2>Card</h2>
+
+<div class="card">
+  <div class="container">
+    <h4><b>John Doe</b></h4> 
+    <p>Architect & Engineer</p> 
+  </div>
+  <div class = "imageHolder">
+  <img src="androidlogo.png" alt="Avatar" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html> 
